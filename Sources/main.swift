@@ -9,7 +9,7 @@ import Musl
 @main
 struct Main {
     static func main() async {
-        let url = URL(string:"https://forums.swift.org/c/general-announce/24")!
+        let url = URL(string:"https://swift.org/")!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         print(request)

@@ -1,0 +1,3 @@
+module CImports {
+    header "CImports.h"
+}

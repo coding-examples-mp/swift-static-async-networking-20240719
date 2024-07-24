@@ -11,6 +11,10 @@ import Musl
 @main
 struct Main {
     static func main() async {
+        await run()
+    }
+    
+    static func run() async {
         let hostname = gethostbyname("swift.org")
         guard let hostname else {
             print("Can't resolve hostname")
@@ -23,7 +27,8 @@ struct Main {
         }
         let name = String(cString: hName)
         let hAddrList = hostname.pointee.h_addr_list
-
+        
         print("found address for : \(name)!")
+
     }
 }
